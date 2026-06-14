@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAVEAN | WEAR BETTER</title>
+    <title>SAVEAN | Mobile Store</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
         }
         html, body {
             width: 100%;
-            overflow-x: hidden; /* Prevents horizontal broken scrolling */
+            overflow-x: hidden;
             background-color: #fcfcfc;
             color: #000;
             -webkit-text-size-adjust: 100%;
@@ -125,7 +125,7 @@
         /* --- MOBILE VALUE PROPOSITIONS --- */
         .value-props {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2x2 grid for mobile clean layout */
+            grid-template-columns: repeat(2, 1fr);
             gap: 15px;
             background-color: #f7f7f7;
             padding: 20px;
@@ -164,14 +164,13 @@
             margin: 40px 0 20px 0;
         }
 
-        /* --- MOBILE CATEGORIES (FIXED SPLIT) --- */
+        /* --- MOBILE CATEGORIES --- */
         .category-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Balanced 2-columns on mobile */
+            grid-template-columns: repeat(2, 1fr);
             gap: 12px;
             padding: 0 15px;
         }
-        /* Make the last item span full width to look centered */
         .category-card:last-child {
             grid-column: span 2;
             height: 200px;
@@ -218,7 +217,7 @@
         /* --- MOBILE TRENDING PRODUCTS --- */
         .trending-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Balanced 2-columns on mobile */
+            grid-template-columns: repeat(2, 1fr);
             gap: 15px;
             padding: 0 15px;
         }
@@ -267,6 +266,7 @@
             font-weight: 700;
             letter-spacing: 0.5px;
             text-transform: uppercase;
+            cursor: pointer;
         }
         
         .dots {
@@ -291,6 +291,7 @@
             flex-direction: column;
             gap: 15px;
             padding: 0 15px;
+            margin-top: 20px;
             margin-bottom: 40px;
         }
         .promo-card {
@@ -349,7 +350,7 @@
         }
         .insta-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 4 columns on small screen width */
+            grid-template-columns: repeat(4, 1fr);
             gap: 4px;
             padding: 0 10px;
         }
@@ -362,7 +363,6 @@
             height: 100%;
             object-fit: cover;
         }
-        /* Hide last 3 items on mobile grid to maintain clean 4-wide alignment layout */
         .insta-item:nth-child(n+5) {
             display: none;
         }
@@ -409,7 +409,7 @@
         }
         .footer-links ul {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Make link columns sit side-by-side to minimize space */
+            grid-template-columns: repeat(2, 1fr);
             gap: 8px;
         }
         .footer-links li {
@@ -451,7 +451,7 @@
 
     <!-- TOP PROMOTION BAR -->
     <div class="top-promo">
-        FREE SHIPPING ON ALL ORDERS ABOVE Rs.6900
+        FREE SHIPPING ON ALL ORDERS ABOVE ₹1499
     </div>
 
     <!-- MOBILE HEADER -->
@@ -468,7 +468,7 @@
     <section class="hero">
         <div class="hero-content">
             <h3>New Arrivals</h3>
-            <h1>WEAR.<br>BETTER.</h1>
+            <h1>THRIFTED.<br>CURATED.</h1>
             <p>Premium thrifted pieces. Handpicked for quality. Priced for you.</p>
             <button class="btn-white">Shop Now</button>
         </div>
@@ -480,7 +480,7 @@
             <i data-lucide="truck"></i>
             <div class="prop-text">
                 <h4>Free Shipping</h4>
-                <p>Above Rs.6900</p>
+                <p>Above ₹1499</p>
             </div>
         </div>
         <div class="prop-item">
@@ -546,63 +546,54 @@
         </div>
     </section>
 
- <!-- TRENDING NOW SECTION -->
-<section class="section-title">Trending Now</section>
-<section class="trending-grid">
-
-    <!-- Item 1 -->
-    <div class="product-card">
-        <div class="product-image">
-            <img src="https://drive.google.com/uc?export=view&id=1U-0Sv_ypOUxgIc5SUan9jZCq7EXqiq0h"
-                 alt="Men/Boys Statue of Liberty Set">
+    <!-- TRENDING NOW SECTION -->
+    <section class="section-title">Trending Now</section>
+    <section class="trending-grid">
+        <!-- Item 1 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/200x250/1e1e1e/ffffff?text=LA+T-shirt" alt="Los Angeles T-shirt">
+            </div>
+            <div class="product-info">
+                <h4>Los Angeles T-shirt</h4>
+                <p>Rs.1347</p>
+                <button class="btn-add-cart">Add to Cart</button>
+            </div>
         </div>
-        <div class="product-info">
-            <h4>Men/Boys Statue of Liberty Set</h4>
-            <p>Rs.2245</p>
-            <button class="btn-add-cart">Add</button>
+        <!-- Item 2 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/200x250/2d2d2d/ffffff?text=Casual+Outfit" alt="Lightweight Casual Outfit">
+            </div>
+            <div class="product-info">
+                <h4>Lightweight Casual Outfit</h4>
+                <p>Rs.3352</p>
+                <button class="btn-add-cart">Add to Cart</button>
+            </div>
         </div>
-    </div>
-
-    <!-- Item 2 -->
-    <div class="product-card">
-        <div class="product-image">
-            <img src="https://drive.google.com/uc?export=view&id=1UGo7Y6kcbR4D5DZ4yYRzDqECodxKbgdY"
-                 alt="Casual Sports Set">
+        <!-- Item 3 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/200x250/151515/ffffff?text=Sports+Set" alt="Men's Casual Sports Set">
+            </div>
+            <div class="product-info">
+                <h4>Men's Casual Sports Set</h4>
+                <p>Rs.1515</p>
+                <button class="btn-add-cart">Add to Cart</button>
+            </div>
         </div>
-        <div class="product-info">
-            <h4>Casual Sports Set</h4>
-            <p>Rs.1515</p>
-            <button class="btn-add-cart">Add</button>
+        <!-- Item 4 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/200x250/252525/ffffff?text=Round+Neck" alt="Men's Round Neck Short Sleeve">
+            </div>
+            <div class="product-info">
+                <h4>Men's Round Neck Short Sleeve</h4>
+                <p>Rs.3486</p>
+                <button class="btn-add-cart">Add to Cart</button>
+            </div>
         </div>
-    </div>
-
-    <!-- Item 3 -->
-    <div class="product-card">
-        <div class="product-image">
-            <img src="https://drive.google.com/uc?export=view&id=1UKNT5seyoVpvm3ItU3ZzVD2yMQmQZm3Y"
-                 alt="Lightweight Casual Outfit">
-        </div>
-        <div class="product-info">
-            <h4>Lightweight Casual Outfit</h4>
-            <p>Rs.3352</p>
-            <button class="btn-add-cart">Add</button>
-        </div>
-    </div>
-
-    <!-- Item 4 -->
-    <div class="product-card">
-        <div class="product-image">
-            <img src="https://drive.google.com/uc?export=view&id=1UMFJC5gGdxFaxSGk3XcKyzRB8zEvRisS"
-                 alt="Sport T-shirt">
-        </div>
-        <div class="product-info">
-            <h4>Sport T-shirt</h4>
-            <p>Rs.3486</p>
-            <button class="btn-add-cart">Add</button>
-        </div>
-    </div>
-
-</section>
+    </section>
 
     <!-- Pagination -->
     <div class="dots">
