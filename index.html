@@ -3,295 +3,732 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAVEAN CLOTHING | Modern Fashion</title>
+    <title>SAVEAN | Thrifted. Curated.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        /* Reset and Base Styles */
+        /* --- GLOBAL STYLES --- */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
         }
-
         body {
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
+            background-color: #fcfcfc;
+            color: #000000;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
-        /* Navigation */
+        /* --- TOP PROMOTION BAR --- */
+        .top-promo {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        /* --- HEADER NAVIGATION --- */
         header {
-            background-color: #ffffff;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            padding: 20px 50px;
+            background-color: #fff;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+        nav ul a {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #333;
+            transition: color 0.2s;
+        }
+        nav ul a:hover {
+            color: #000;
+        }
+        .header-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .header-icons i {
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
         }
 
-        .logo {
-            font-size: 24px;
+        /* --- HERO BANNER --- */
+        .hero {
+            background-color: #121212;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            min-height: 550px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-content {
+            width: 50%;
+            padding-left: 10%;
+            z-index: 2;
+        }
+        .hero-content h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+        .hero-content h1 {
+            font-size: 54px;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        .hero-content p {
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 35px;
+            max-width: 350px;
+            line-height: 1.6;
+        }
+        .btn-white {
+            display: inline-block;
+            background-color: #fff;
+            color: #000;
+            padding: 12px 30px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+        }
+        .hero-image {
+            width: 50%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            background: url('https://via.placeholder.com/800x600/1e1e1e/ffffff?text=SAVEAN+HERO+IMAGE') center/cover no-repeat;
+        }
+
+        /* --- VALUE PROPOSITION BAR --- */
+        .value-props {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f7f7f7;
+            padding: 25px 50px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .prop-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .prop-item i {
+            width: 24px;
+            height: 24px;
+            stroke-width: 1.5;
+        }
+        .prop-text h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+        .prop-text p {
+            font-size: 11px;
+            color: #666;
+        }
+
+        /* --- SECTION HEADERS --- */
+        .section-title {
+            text-align: center;
+            font-size: 18px;
             font-weight: 800;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: #111;
+            margin: 60px 0 30px 0;
         }
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
+        /* --- SHOP BY CATEGORY --- */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            padding: 0 40px;
         }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #555;
-            font-weight: 500;
-            transition: color 0.3s;
+        .category-card {
+            position: relative;
+            height: 380px;
+            overflow: hidden;
         }
-
-        .nav-links a:hover {
-            color: #000;
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
-            height: 70vh;
+        .category-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.1);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            color: #fff;
-            padding: 20px;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 25px;
-            max-width: 600px;
-        }
-
-        .cta-btn {
-            background-color: #fff;
-            color: #111;
-            padding: 12px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-        }
-
-        .cta-btn:hover {
-            background-color: #111;
             color: #fff;
         }
-
-        /* Products Section */
-        .products-section {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
-            position: relative;
-            text-transform: uppercase;
+        .category-overlay h4 {
+            font-size: 14px;
             letter-spacing: 2px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .btn-underline {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 4px;
         }
 
-        .product-grid {
+        /* --- TRENDING NOW SECTION --- */
+        .trending-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+            padding: 0 40px;
         }
-
         .product-card {
-            background: #fff;
-            border: 1px solid #eee;
-            padding: 15px;
-            text-align: center;
-            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
         }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
         .product-image {
+            background-color: #f4f4f4;
+            height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        .product-image img {
             width: 100%;
-            height: 350px;
+            height: 100%;
             object-fit: cover;
-            background-color: #f0f0f0;
-            margin-bottom: 15px;
         }
-
-        .product-name {
-            font-size: 1.1rem;
-            margin-bottom: 5px;
+        .product-info h4 {
+            font-size: 12px;
             font-weight: 600;
+            margin-bottom: 5px;
+            color: #222;
         }
-
-        .product-price {
-            color: #666;
-            font-weight: bold;
-            margin-bottom: 15px;
+        .product-info p {
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 12px;
         }
-
-        .buy-btn {
-            background-color: #111;
+        .btn-add-cart {
+            width: 100%;
+            background-color: #000;
             color: #fff;
             border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            width: 100%;
+            padding: 10px 0;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            font-weight: 500;
-            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+        
+        /* Pagination Dots */
+        .dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 25px 0 40px 0;
+        }
+        .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #ddd;
+        }
+        .dot.active {
+            background-color: #000;
         }
 
-        .buy-btn:hover {
-            background-color: #444;
+        /* --- THREE BANNER GRID --- */
+        .promo-banners {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 0 40px;
+            margin-bottom: 60px;
+        }
+        .promo-card {
+            position: relative;
+            height: 280px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 40px;
+            background-size: cover;
+            background-position: center;
+        }
+        .promo-card h3 {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .promo-card p {
+            font-size: 12px;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+        .btn-outline-white {
+            align-self: flex-start;
+            border: 1px solid #fff;
+            background: transparent;
+            color: #fff;
+            padding: 10px 25px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
         }
 
-        /* About Section */
-        .about-section {
-            background-color: #f1f1f1;
-            padding: 60px 20px;
+        /* --- INSTAGRAM FEED --- */
+        .instagram-section {
+            background-color: #000;
+            color: #fff;
+            padding: 40px 0 20px 0;
+        }
+        .insta-header {
             text-align: center;
+            margin-bottom: 25px;
+        }
+        .insta-header h3 {
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .insta-header p {
+            font-size: 12px;
+            color: #888;
+        }
+        .insta-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            padding: 0 20px;
+        }
+        .insta-item {
+            height: 160px;
+            overflow: hidden;
+            background-color: #222;
+        }
+        .insta-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Footer / Contact */
+        /* --- FOOTER --- */
         footer {
-            background-color: #111;
-            color: #fff;
-            padding: 40px 20px;
+            background-color: #fff;
+            padding: 60px 50px 30px 50px;
+            border-top: 1px solid #eaeaea;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr) 2fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-brand h2 {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        .footer-brand p {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.6;
+            max-width: 220px;
+            margin-bottom: 20px;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        .social-icons i {
+            width: 16px;
+            height: 16px;
+            color: #333;
+            cursor: pointer;
+        }
+        .footer-links h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .footer-links ul flex {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .footer-links li {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .footer-links li a:hover {
+            color: #000;
+        }
+        .newsletter h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        .newsletter p {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .search-box {
+            display: flex;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+        }
+        .search-box input {
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 12px;
+            padding: 5px 0;
+        }
+        .search-box button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        .copyright {
             text-align: center;
-        }
-
-        .footer-links {
-            margin: 20px 0;
-        }
-
-        .footer-links a {
-            color: #aaa;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        .footer-links a:hover {
-            color: #fff;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .hero h1 {
-                font-size: 2rem;
-            }
+            font-size: 11px;
+            color: #999;
+            border-top: 1px solid #eaeaea;
+            padding-top: 25px;
         }
     </style>
 </head>
 <body>
 
+    <div class="top-promo">
+        FREE SHIPPING ON ALL ORDERS ABOVE ₹1499
+    </div>
+
     <header>
-        <div class="nav-container">
-            <div class="logo">SAVEAN CLOTHING</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#about">Our Story</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <div class="logo">SAVEAN</div>
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">COLLECTIONS</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">CONTACT</a></li>
             </ul>
+        </nav>
+        <div class="header-icons">
+            <i data-lucide="search"></i>
+            <i data-lucide="user"></i>
+            <i data-lucide="shopping-bag"></i>
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <h1>Define Your Style</h1>
-        <p>Discover high-quality, premium minimalist clothing designed for everyday comfort and effortless confidence.</p>
-        <a href="#shop" class="cta-btn">Shop Collection</a>
+    <section class="hero">
+        <div class="hero-content">
+            <h3>New Arrivals</h3>
+            <h1>THRIFTED.<br>CURATED.</h1>
+            <p>Premium thrifted pieces. Handpicked for quality. Priced for you.</p>
+            <button class="btn-white">Shop Now</button>
+        </div>
+        <div class="hero-image"></div>
     </section>
 
-    <section id="shop" class="products-section">
-        <h2 class="section-title">Featured Collection</h2>
-        
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=500&q=80" alt="Classic Minimalist Tee" class="product-image">
-                <div class="product-name">Classic Minimalist Tee</div>
-                <div class="product-price">$29.99</div>
-                <button class="buy-btn" onclick="alert('Added Classic Minimalist Tee to cart!')">Add to Cart</button>
+    <section class="value-props">
+        <div class="prop-item">
+            <i data-lucide="truck"></i>
+            <div class="prop-text">
+                <h4>Free Shipping</h4>
+                <p>On all orders above ₹1499</p>
             </div>
-
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=500&q=80" alt="Premium Comfort Hoodie" class="product-image">
-                <div class="product-name">Premium Comfort Hoodie</div>
-                <div class="product-price">$59.99</div>
-                <button class="buy-btn" onclick="alert('Added Premium Comfort Hoodie to cart!')">Add to Cart</button>
+        </div>
+        <div class="prop-item">
+            <i data-lucide="award"></i>
+            <div class="prop-text">
+                <h4>Premium Quality</h4>
+                <p>Handpicked & quality checked</p>
             </div>
-
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=500&q=80" alt="Tailored Denim Jeans" class="product-image">
-                <div class="product-name">Tailored Denim Jeans</div>
-                <div class="product-price">$79.99</div>
-                <button class="buy-btn" onclick="alert('Added Tailored Denim Jeans to cart!')">Add to Cart</button>
+        </div>
+        <div class="prop-item">
+            <i data-lucide="refresh-cw"></i>
+            <div class="prop-text">
+                <h4>Easy Returns</h4>
+                <p>Hassle free returns</p>
             </div>
-
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=500&q=80" alt="Oversized Urban Jacket" class="product-image">
-                <div class="product-name">Oversized Urban Jacket</div>
-                <div class="product-price">$89.99</div>
-                <button class="buy-btn" onclick="alert('Added Oversized Urban Jacket to cart!')">Add to Cart</button>
+        </div>
+        <div class="prop-item">
+            <i data-lucide="phone-call"></i>
+            <div class="prop-text">
+                <h4>24/7 Support</h4>
+                <p>We're here to help</p>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about-section">
-        <div class="about-content">
-            <h2 class="section-title">About SAVEAN</h2>
-            <p>At SAVEAN CLOTHING, we believe that fashion should be both timeless and sustainable. Our pieces are crafted with premium materials and designed to fit effortlessly into any wardrobe. We focus on clean lines, exceptional fit, and modern essentials that empower you to look and feel your best every single day.</p>
+    <section class="section-title">Shop By Category</section>
+    <section class="category-grid">
+        <div class="category-card">
+            <img src="https://via.placeholder.com/400x500/1a1a1a/ffffff?text=Hoodies" alt="Hoodies">
+            <div class="category-overlay">
+                <h4>Hoodies</h4>
+                <a href="#" class="btn-underline">Shop Now</a>
+            </div>
+        </div>
+        <div class="category-card">
+            <img src="https://via.placeholder.com/400x500/262626/ffffff?text=T-Shirts" alt="T-Shirts">
+            <div class="category-overlay">
+                <h4>T-Shirts</h4>
+                <a href="#" class="btn-underline">Shop Now</a>
+            </div>
+        </div>
+        <div class="category-card">
+            <img src="https://via.placeholder.com/400x500/1f1f1f/ffffff?text=Pants" alt="Pants">
+            <div class="category-overlay">
+                <h4>Pants</h4>
+                <a href="#" class="btn-underline">Shop Now</a>
+            </div>
+        </div>
+        <div class="category-card">
+            <img src="https://via.placeholder.com/400x500/2d2d2d/ffffff?text=Jackets" alt="Jackets">
+            <div class="category-overlay">
+                <h4>Jackets</h4>
+                <a href="#" class="btn-underline">Shop Now</a>
+            </div>
+        </div>
+        <div class="category-card">
+            <img src="https://via.placeholder.com/400x500/121212/ffffff?text=Accessories" alt="Accessories">
+            <div class="category-overlay">
+                <h4>Accessories</h4>
+                <a href="#" class="btn-underline">Shop Now</a>
+            </div>
         </div>
     </section>
 
-    <footer id="contact">
-        <h3>SAVEAN CLOTHING</h3>
-        <p>Elevating your daily wardrobe.</p>
-        <div class="footer-links">
-            <a href="#">Privacy Policy</a> | 
-            <a href="#">Terms of Service</a> | 
-            <a href="mailto:support@saveanclothing.com">support@saveanclothing.com</a>
+    <section class="section-title">Trending Now</section>
+    <section class="trending-grid">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/300x350/1c1c1c/ffffff?text=Dark+Dreams+Hoodie" alt="Product">
+            </div>
+            <div class="product-info">
+                <h4>Dark Dreams Hoodie</h4>
+                <p>₹1,699</p>
+                <button class="btn-add-cart">Add to Cart</button>
+            </div>
         </div>
-        <p>&copy; 2026 SAVEAN CLOTHING. All Rights Reserved.</p>
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/300x350/e8e8e8/000000?text=Chaos+Club+Tee" alt="Product">
+            </div>
+            <div class="product-info">
+                <h4>Chaos Club Tee</h4>
+                <p>₹899</p>
+                <button class="btn-add-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/300x350/4a3f35/ffffff?text=Vintage+Washed+Tee" alt="Product">
+            </div>
+            <div class="product-info">
+                <h4>Vintage Washed Tee</h4>
+                <p>₹949</p>
+                <button class="btn-add-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/300x350/2b2c2b/ffffff?text=Utility+Cargo+Pants" alt="Product">
+            </div>
+            <div class="product-info">
+                <h4>Utility Cargo Pants</h4>
+                <p>₹1,599</p>
+                <button class="btn-add-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/300x350/3d3d3d/ffffff?text=Savean+Oversized+Tee" alt="Product">
+            </div>
+            <div class="product-info">
+                <h4>Savean Oversized Tee</h4>
+                <p>₹999</p>
+                <button class="btn-add-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/300x350/c2b29a/ffffff?text=Essential+Hoodie" alt="Product">
+            </div>
+            <div class="product-info">
+                <h4>Essential Hoodie</h4>
+                <p>₹1,499</p>
+                <button class="btn-add-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+
+    <section class="promo-banners">
+        <div class="promo-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://via.placeholder.com/600x400/181818/ffffff?text=NEW+DROPS');">
+            <h3>New Drops</h3>
+            <p>Every Week</p>
+            <button class="btn-outline-white">Explore</button>
+        </div>
+        <div class="promo-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://via.placeholder.com/600x400/222222/ffffff?text=PREMIUM+THRIFT');">
+            <h3>Premium Thrift</h3>
+            <p>Handpicked Pieces</p>
+            <button class="btn-outline-white">Explore</button>
+        </div>
+        <div class="promo-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://via.placeholder.com/600x400/151515/ffffff?text=SALE');">
+            <h3>Up to 50% Off</h3>
+            <p>Limited Time Only</p>
+            <button class="btn-outline-white">Shop Sale</button>
+        </div>
+    </section>
+
+    <section class="instagram-section">
+        <div class="insta-header">
+            <h3>Follow Us On Instagram</h3>
+            <p>@savean.thrift</p>
+        </div>
+        <div class="insta-grid">
+            <div class="insta-item"><img src="https://via.placeholder.com/200/111/fff?text=1" alt="Insta"></div>
+            <div class="insta-item"><img src="https://via.placeholder.com/200/222/fff?text=2" alt="Insta"></div>
+            <div class="insta-item"><img src="https://via.placeholder.com/200/333/fff?text=3" alt="Insta"></div>
+            <div class="insta-item"><img src="https://via.placeholder.com/200/444/fff?text=4" alt="Insta"></div>
+            <div class="insta-item"><img src="https://via.placeholder.com/200/555/fff?text=5" alt="Insta"></div>
+            <div class="insta-item"><img src="https://via.placeholder.com/200/666/fff?text=6" alt="Insta"></div>
+            <div class="insta-item"><img src="https://via.placeholder.com/200/777/fff?text=7" alt="Insta"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>SAVEAN</h2>
+                <p>Thrifted culture. Curated style. Pieces with a past, made for the present.</p>
+                <div class="social-icons">
+                    <i data-lucide="instagram"></i>
+                    <i data-lucide="twitter"></i>
+                    <i data-lucide="phone"></i>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#">All Products</a></li>
+                    <li><a href="#">Hoodies</a></li>
+                    <li><a href="#">T-Shirts</a></li>
+                    <li><a href="#">Pants</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping & Delivery</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Track Your Order</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="newsletter">
+                <h4>Newsletter</h4>
+                <p>Get exclusive updates on new drops and special offers.</p>
+                <div class="search-box">
+                    <input type="email" placeholder="Enter your email">
+                    <button><i data-lucide="arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 SAVEAN. All rights reserved.
+        </div>
     </footer>
 
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
